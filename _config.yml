@@ -12,3 +12,6 @@ whitelist:
   - jekyll-gist
   - jekyll-feed
   - jemoji
+
+include:
+- toolbar.html
