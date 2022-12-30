@@ -55,13 +55,15 @@ https://www.tooplate.com/view/2115-marvel
     <section>
         <div class="container">
             <ul class="grid-list">
+                {% for post in site.categories.post % }
                   <li>
-                    <img src="images/project/dave-hoefler-lsoogGC_5dg-unsplash.jpg" alt="description">  
-                    <div class="p-small max-lines-3 padding-lr-15"> Decemeber 9, 2022 </div>
-                    <div class="custom-h5 max-lines-3 padding-lr-15">Hot Flow vs Cold Flow</div>
-                    <div class="p-small max-lines-3 padding-lrb-15"> Here we will learn about Cold and hot flow. </div>
+                    <img src={{ post.thumbnail_url }} alt="optional">  
+                    <div class="p-small max-lines-3 padding-lr-15"> {{ post.date }} </div>
+                    <div class="custom-h5 max-lines-3 padding-lr-15"> {{ post.title }}</div>
+                    <div class="p-small max-lines-3 padding-lrb-15"> {{ post.description }} </div>
                 </li>
-                </ul>
+                {% endfor %}
+            </ul>
         </div>
     </section>
     

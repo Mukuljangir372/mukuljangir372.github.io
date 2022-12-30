@@ -1,18 +1,15 @@
 ---
-title: ActionBarSherlock - A Love Story (Part 1)
-thumbnail_url: ""
-layout: post
+title: Clean Architecture in Android
+thumbnail_url: "https://github.com/Mukuljangir372/mukuljangir372.github.io/blob/main/files/thumbnails/dave-hoefler-lsoogGC_5dg-unsplash.jpg"
+date: "25 December 2021"
+description: "We will learn"
+author: "Mukul Jangir"
 
+layout: post
 categories: post
 tags:
   - Android
-  - ActionBarSherlock
-
-lead: I have never formally introduced ActionBarSherlock in a blog post.
-source: http://actionbarsherlock.com
-
-redirect_from:
-  - /post/13619849069/actionbarsherlock-a-love-story-part-1
+  - Architecture
 ---
 
 The Library
