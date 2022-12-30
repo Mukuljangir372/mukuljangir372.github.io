@@ -114,6 +114,10 @@ p {
   letter-spacing: -1px;
 }
 
+.padding-top-50 {
+  padding-top: 80px;
+}
+
 .padding-lr-15 {
   padding-left: 15px;
   padding-right: 15px;
