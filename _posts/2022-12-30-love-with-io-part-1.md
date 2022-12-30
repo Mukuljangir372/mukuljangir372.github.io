@@ -1,5 +1,6 @@
 ---
-title: "Clean Architecture in Android"
+title: Clean Architecture in Android
+layout: post
 
 thumbnail_url: "https://i.ibb.co/vPt2SZV/dave-hoefler-lsoog-GC-5dg-unsplash.jpg" alt="dave-hoefler-lsoog-GC-5dg-unsplash"
 
@@ -9,7 +10,6 @@ description: "We will learn"
 
 author: "Mukul Jangir"
 
-layout: post
 categories: post
 tags:
   - Android
