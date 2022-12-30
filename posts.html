@@ -50,7 +50,7 @@ title: Posts
             <ul class="grid-list">
                 {% for post in site.categories.post %}
                 <script>
-                  console.log("${post.thumbnail_url}")
+                  console.log("${{ post.thumbnail_url.replace('https://mukuljangir372.github.io/$','') }}")
                 </script>
                   <li>
                     <img src="${{ post.thumbnail_url.replace('https://mukuljangir372.github.io/$','') }}" alt="">  
