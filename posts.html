@@ -50,7 +50,7 @@ title: Posts
             <ul class="grid-list">
                 {% for post in site.categories.post %}
                   <li>
-                    <img src="${{ post.thumbnail_url }}" alt="">  
+                    <img src="{{ post.thumbnail_url }}" alt="">  
                     <div class="p-small max-lines-3 padding-lr-15"> {{ post.added_date }} </div>
                     <div class="custom-h5 max-lines-3 padding-lr-15"> {{ post.title }} </div>
                     <div class="p-small max-lines-3 padding-lrb-15"> {{ post.description }} </div>
