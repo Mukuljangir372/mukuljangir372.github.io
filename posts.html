@@ -53,14 +53,19 @@ https://www.tooplate.com/view/2115-marvel
         </div>
     </nav>
 
-    <ul class="gallery">
-        {% for post in site.categories.post %}
-          <li>
-            <h5>{{ post.title }}</h5>
-            <img src="images/undraw/undraw_mobile_development_re_wwsn-2.svg" alt="Image 1">  
-        </li>
-        {% endfor %}
-        </ul>
+    <section>
+        <div class="container">
+            <ul class="gallery">
+                {% for post in site.categories.post %}
+                  <li>
+                    <h5>{{ post.title }}</h5>
+                    <img src="images/undraw/undraw_mobile_development_re_wwsn-2.svg" alt="Image 1">  
+                </li>
+                {% endfor %}
+                </ul>
+        </div>
+    </section>
+    
 
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
