@@ -102,6 +102,10 @@ p {
   border-color: #f0eded;
 }
 
+.grid-list li:hover {
+  background-color: #f0eded;
+}
+
 .grid-list img {
   width: 250px;
   height: 250px;
@@ -394,6 +398,9 @@ b, strong {
 }
 .dark-mode .grid-list li {
   border-color: #474559;
+}
+.dark-mode .grid-list li:hover {
+  background-color: #474559;
 }
 .dark-mode .p-top-margin, .dark-mode .p-small {
   color: #ffffff;
