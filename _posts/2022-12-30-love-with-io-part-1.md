@@ -1,5 +1,6 @@
 ---
 title: ActionBarSherlock - A Love Story (Part 1)
+thumbnail_url: ""
 layout: post
 
 categories: post
