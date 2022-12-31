@@ -1,6 +1,5 @@
-const isDarkMode = Boolean(window.localStorage.getItem("darkMode", false))
-console.log(isDarkMode)
-if(isDarkMode == true) {
+const isDarkMode = localStorage.getItem("darkMode")
+if(isDarkMode == 'true') {
   $('.color-mode-icon').toggleClass('active')
   document.body.classList.add("dark-mode");
 }
@@ -15,7 +14,7 @@ if(isDarkMode == true) {
         $('body').toggleClass('dark-mode')
 
         const isDarkMode = document.body.classList.contains("dark-mode");
-        window.localStorage.setItem('darkMode',isDarkMode)
+        localStorage.setItem("darkMode", isDarkMode + '')
     })
 
     // HEADER
