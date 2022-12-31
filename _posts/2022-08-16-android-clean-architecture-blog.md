@@ -34,7 +34,7 @@ Clean architecture solves the complexity of projects in a simpler and scalable f
 • Is the component scalable?\
 • How is DI managed?\
 • What patterns are used for the prevention of complexity?\
-• How common components are sharing code, and in which manner?\
+• How common components are sharing code, and in which manner?
 
 Modularization is a technique where we separate the layers/features into modules. By using multi-module architecture, complex projects can easily be converted into more readable, testable, reusable, and scalable forms. And improve the Gradle build performance.
 Both clean architecture and modularization help the new team members to understand the flow of code easily. It makes adopting processes smooth and easy.
@@ -80,9 +80,9 @@ class ExampleRepository(
 Also, when it comes to business models, we should separate these models by network and local database cases like the following:
 
 #### Benefits
-• Prevent nullable data
-• Easy mapping
-• Reduce the complexity of annotations.
+• Prevent nullable data\
+• Easy mapping\
+• Reduce the complexity of annotations.\
 • Sometimes, our screens don’t need the full data from network models. In this case, we can   provide only needed data to UI.
 
 ```java
