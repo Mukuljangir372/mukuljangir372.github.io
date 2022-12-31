@@ -8,7 +8,7 @@ tags:
   - Kotlin
   - Gradle
 
-thumbnail_url: https://mukuljangir372.github.io/files/thumbnails/flying_gradle.png
+thumbnail_url: https://mukuljangir372.github.io/files/thumbnails/flying-gradle.png
 
 redirect_url: post/2022-12-16-create-gradle-plugins-blog
 
