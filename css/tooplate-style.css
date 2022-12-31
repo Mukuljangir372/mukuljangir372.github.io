@@ -146,7 +146,7 @@ p {
 .nc,
 .cm,
 .n {
-  color: rgb(217, 175, 120);
+  color: rgb(247, 144, 54);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -436,6 +436,9 @@ code.keyword {
 }
 .dark-mode .p-top-margin, .dark-mode .p-small  {
   color: #ffffff;
+}
+.dark-mode .nc, .dark-mode .cm, .dark-mode .n {
+  color: sandybrown;
 }
 .timeline-wrapper {
   position: relative;
