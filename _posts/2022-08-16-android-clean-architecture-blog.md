@@ -31,10 +31,10 @@ If you’re an Android developer, you should be careful while putting code into 
 ### Clean Architecture and Modularization
 Clean architecture solves the complexity of projects in a simpler and scalable form. In clean architecture, we separate the codebase of an app into different layers at different levels/scopes. By using SOLID principles, we can make it more beautiful and scalable. SOLID principles are design principles that include questions like
 
-• Is the component scalable?
-• How is DI managed?
-• What patterns are used for the prevention of complexity?
-• How common components are sharing code, and in which manner?
+• Is the component scalable?\
+• How is DI managed?\
+• What patterns are used for the prevention of complexity?\
+• How common components are sharing code, and in which manner?\
 
 Modularization is a technique where we separate the layers/features into modules. By using multi-module architecture, complex projects can easily be converted into more readable, testable, reusable, and scalable forms. And improve the Gradle build performance.
 Both clean architecture and modularization help the new team members to understand the flow of code easily. It makes adopting processes smooth and easy.
