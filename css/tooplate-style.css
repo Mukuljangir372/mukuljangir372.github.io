@@ -79,7 +79,7 @@ p {
 
 .grid-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 250px));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 330px));
   grid-gap: 20px;
   list-style: none;
   margin: 0;
@@ -99,9 +99,11 @@ p {
 }
 
 .grid-list img {
-  width: 250px;
+  width: 330px;
   height: 250px;
   margin-bottom: 10px;
+  margin: auto;
+  display: block;
 }
 
 .custom-h5 {
