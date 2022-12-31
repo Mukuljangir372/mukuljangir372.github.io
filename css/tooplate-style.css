@@ -139,9 +139,16 @@ p {
   color: orchid;
 }
 
+.c1 {
+  color: green;
+}
+
+.kd {
+  color: orangered;
+}
+
 .nc,
 .cm,
-.kd,
 .n {
   color: cornflowerblue;
 }
