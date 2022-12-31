@@ -125,10 +125,10 @@ You can preserve data while the user is in your app by adding in-memory data cac
 
 That's it for now.
 
-**Thank you guys**\
+**Thank you**\
 **Mukul Jangir**
 
-**Connect me on :**
+**Connect me on :**\
 • Linkedin - [@mukuljangir372](https://www.linkedin.com/in/mukuljangir372)\
 • Github - [@mukuljangir372](https://github.com/Mukuljangir372)\
 • Playstore - [@mukuljangir](https://play.google.com/store/apps/developer?id=Mukul+Jangir)
