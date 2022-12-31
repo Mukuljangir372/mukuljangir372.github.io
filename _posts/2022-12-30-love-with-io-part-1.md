@@ -19,13 +19,16 @@ author: Mukul Jangir
 ---
 
 ## Clean Architecture in Android
+> Make sure you learn
 Here will will learn how to enable clean code.
 # Hi
 
-```
-Block of code
+```java
+class Hello {
+  fun great() {
+    val ops: Boolean = false
+  }
+}
 ```
 
-*Bold*
-
-> Quote
+**Bold**
