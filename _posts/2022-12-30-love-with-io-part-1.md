@@ -21,7 +21,11 @@ author: Mukul Jangir
 ## Clean Architecture in Android
 Here will will learn how to enable clean code.
 # Hi
-`
-Block Of Code
-`
+
+```
+Block of code
+```
+
 *Bold*
+
+> Quote
