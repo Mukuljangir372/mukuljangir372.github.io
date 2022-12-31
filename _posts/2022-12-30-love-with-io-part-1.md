@@ -18,4 +18,15 @@ description: We will learn
 author: Mukul Jangir
 ---
 
-The Library
+ 1. inline code like this: `*Hello* **world!**"`
+ 2. fenced code blocks (you may use ` ``` ` or `~~~` 
+   as delimiters): 
+``` markdown
+*Hello* **world!**
+```
+ 3. indented code blocks
+
+
+    *Hello* 
+    
+    **worl
