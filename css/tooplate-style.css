@@ -168,8 +168,35 @@ b, strong {
   font-weight: bold;
 }
 
+/* Background color of Block Of Code*/
 pre {
-  background-color:#eee ;
+  padding: 10px;
+  background-color:#eee;
+}
+
+/* Customise Block Of Code*/
+code.keyword {
+  color: royalblue;
+}
+
+.highlight {
+  background-color: yellow;
+}
+
+.line-numbers {
+  counter-reset: line;
+}
+
+.line-numbers > code {
+  counter-increment: line;
+}
+
+.line-numbers > code:before {
+  content: counter(line);
+  color: goldenrod;
+  display: inline-block;
+  width: 2em;
+  text-align: right;
 }
 
 .custom-btn {
@@ -412,8 +439,12 @@ pre {
 .dark-mode .grid-list li {
   border-color: #474559;
 }
-.dark-mode .grid-list li:hover, .dark-mode pre  {
+.dark-mode .grid-list li:hover  {
   background-color: #474559;
+}
+.dark-mode pre {
+  padding: 10px;
+  background-color:#1f1f1f;
 }
 .dark-mode .p-top-margin, .dark-mode .p-small  {
   color: #ffffff;
