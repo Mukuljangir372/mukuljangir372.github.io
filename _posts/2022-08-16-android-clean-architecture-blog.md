@@ -123,7 +123,7 @@ Sometimes, we need an in-memory cache to preserve the data. Suppose a new requir
 
 You can preserve data while the user is in your app by adding in-memory data caching. Caches are meant to save some information in memory for a specific time — in this case, as long as the user is in the app. Using Mutex from Kotlin Coroutines, we can lock the thread-safe write.
 
-That's it for now.
+That's it for now. 
 
 **Thank you**\
 **Mukul Jangir**

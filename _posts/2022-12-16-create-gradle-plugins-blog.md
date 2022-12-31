@@ -20,9 +20,7 @@ author: Mukul Jangir
 ---
 
 ## Create Gradle Plugins In Android & KMM
-
-
-That's it for now.
+Upcoming Soon!
 
 **Thank you**\
 **Mukul Jangir**
