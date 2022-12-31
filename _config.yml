@@ -1,3 +1,5 @@
+markdown: kramdown
+
 # Plugins
 plugins:
   - jekyll-paginate
