@@ -6,7 +6,6 @@ categories: post
 tags:
   - Android
   - Kotlin
-  - Clean Architecture
 
 thumbnail_url: https://mukuljangir372.github.io/files/thumbnails/dave-hoefler-lsoogGC_5dg-unsplash.jpg
 
