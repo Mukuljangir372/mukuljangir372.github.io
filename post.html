@@ -4,22 +4,7 @@
   <title>My Page</title>
 </head>
 <body>
-  <div id="content"></div>
-
-  <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
-  <script>
-    // Load the markdown file using an XMLHttpRequest
-    var xhr = new XMLHttpRequest();
-    xhr.onload = function() {
-      // Convert the markdown to HTML
-      var converter = new showdown.Converter();
-      var html = converter.makeHtml(xhr.responseText);
-      // Insert the HTML into the page
-      document.getElementById('content').innerHTML = html;
-    };
-    xhr.open('GET', 'https://mukuljangir372.github.io/post/2022-12-30-love-with-io-part-1');
-    xhr.send();
-  </script>
+  {% include post/2022-12-30-love-with-io-part-1.md %}
 </body>
 </html>
 
