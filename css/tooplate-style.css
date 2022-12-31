@@ -122,6 +122,14 @@ p {
   padding-top: 50px;
 }
 
+.padding-top-30 {
+  padding-top: 30px;
+}
+
+.padding-top-0 {
+  padding-top: 0px;
+}
+
 .padding-lr-15 {
   padding-left: 15px;
   padding-right: 15px;
@@ -132,6 +140,7 @@ p {
   padding-right: 15px;
   padding-bottom: 15px;
 }
+
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
@@ -402,7 +411,7 @@ b, strong {
 .dark-mode .grid-list li:hover {
   background-color: #474559;
 }
-.dark-mode .p-top-margin, .dark-mode .p-small {
+.dark-mode .p-top-margin, .dark-mode .p-small  {
   color: #ffffff;
 }
 .timeline-wrapper {
