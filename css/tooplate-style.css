@@ -169,7 +169,7 @@ b, strong {
 }
 
 pre {
-  color: #3d319e;
+  background-color:#eee ;
 }
 
 .custom-btn {
@@ -401,7 +401,7 @@ pre {
 .dark-mode .feature-card .uil,
 .dark-mode .navbar-light .navbar-brand,
 .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode h5, .dark-mode h6, .dark-mode p, .dark-mode .custom-h5,
-.dark-mode .color-mode, .dark-mode pre {
+.dark-mode .color-mode {
   color: #ffffff;
 }
 .dark-mode .owl-carousel .owl-nav button.owl-next,
@@ -412,7 +412,7 @@ pre {
 .dark-mode .grid-list li {
   border-color: #474559;
 }
-.dark-mode .grid-list li:hover {
+.dark-mode .grid-list li:hover, .dark-mode pre  {
   background-color: #474559;
 }
 .dark-mode .p-top-margin, .dark-mode .p-small  {
