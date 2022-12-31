@@ -23,11 +23,7 @@ author: Mukul Jangir
 Here will will learn how to enable clean code.
 # Hi
 
-```css
-pre[class*="language-css"] {
-  background-color: yellow;
-  color: red;
-}
+```java
 class Hello {
   fun great() {
     val ops: Boolean = false

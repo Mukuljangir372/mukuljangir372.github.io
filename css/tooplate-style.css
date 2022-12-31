@@ -168,6 +168,10 @@ b, strong {
   font-weight: bold;
 }
 
+pre {
+  color: #3d319e;
+}
+
 .custom-btn {
   background: #eee;
   color: #5b5b5b;
@@ -397,7 +401,7 @@ b, strong {
 .dark-mode .feature-card .uil,
 .dark-mode .navbar-light .navbar-brand,
 .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode h5, .dark-mode h6, .dark-mode p, .dark-mode .custom-h5,
-.dark-mode .color-mode {
+.dark-mode .color-mode, .dark-mode pre {
   color: #ffffff;
 }
 .dark-mode .owl-carousel .owl-nav button.owl-next,
