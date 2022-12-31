@@ -19,7 +19,7 @@ author: Mukul Jangir
 ---
 
 ## Clean Architecture in Android
-> Make sure you learn
+> Make sure you learn Yup!
 Here will will learn how to enable clean code.
 # Hi
 
