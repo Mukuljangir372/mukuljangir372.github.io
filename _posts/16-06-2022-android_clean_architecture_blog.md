@@ -99,27 +99,3 @@ data class Article(
    val name: String,
 )
 ```
-
-While making an API call or any local database operation, it should be safe to main-thread. It’s a good practise to inject CoroutineDispatcher using DI.
-
-```java
-class NewsRemoteDataSource(
-  private val newsApi: NewsApi,
-  private val ioDispatcher: CoroutineDispatcher //inject 
-) {
-    /**
-     * Fetches the latest news from the network and returns the result.
-     * This executes on an IO-optimized thread pool, the function is main-safe.
-     */
-    suspend fun fetchLatestNews(): List<ArticleHeadline> =
-        withContext(ioDispatcher) {
-            newsApi.fetchLatestNews()
-        }
-    }
-}
-```
-
-Sometimes, we need an in-memory cache to preserve the data. Suppose a new requirement is introduced for the News app: when the user opens the screen, cached news must be presented to the user if a request has been made previously. Otherwise, the app should request a network to fetch the latest news.
-
-You can preserve data while the user is in your app by adding in-memory data caching. Caches are meant to save some information in memory for a specific time — in this case, as long as the user is in the app. Using Mutex from Kotlin Coroutines, we can lock the thread-safe write.
-
