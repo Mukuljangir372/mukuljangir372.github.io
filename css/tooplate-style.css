@@ -134,15 +134,17 @@ p {
 }
 
 /* Block of code style */
-.highlight {
-  color: blue;
 
+.nf {
+  color: orchid;
 }
 
-.nc {
-  color: gold;
+.nc,
+.cm,
+.kd,
+.n {
+  color: cornflowerblue;
 }
-
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
