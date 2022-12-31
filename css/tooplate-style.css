@@ -80,7 +80,7 @@ p {
 .grid-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 250px));
-  grid-gap: 10px;
+  grid-gap: 20px;
   list-style: none;
   margin: 0;
   padding: 0;

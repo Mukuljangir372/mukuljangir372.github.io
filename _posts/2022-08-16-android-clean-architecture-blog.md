@@ -14,7 +14,7 @@ redirect_url: post/2022-08-16-android-clean-architecture-blog
 
 added_date: 16 Aug 2022
 
-description: A guide to help you how to setup clean and scalable architecture in Android and KMM
+description: A guide to help you how to setup clean and scalable architecture
 
 author: Mukul Jangir
 ---
@@ -31,10 +31,10 @@ If you’re an Android developer, you should be careful while putting code into 
 ### Clean Architecture and Modularization
 Clean architecture solves the complexity of projects in a simpler and scalable form. In clean architecture, we separate the codebase of an app into different layers at different levels/scopes. By using SOLID principles, we can make it more beautiful and scalable. SOLID principles are design principles that include questions like
 
-- Is the component scalable?
-- How is DI managed?
-- What patterns are used for the prevention of complexity?
-- How common components are sharing code, and in which manner?
+• Is the component scalable?
+• How is DI managed?
+• What patterns are used for the prevention of complexity?
+• How common components are sharing code, and in which manner?
 
 Modularization is a technique where we separate the layers/features into modules. By using multi-module architecture, complex projects can easily be converted into more readable, testable, reusable, and scalable forms. And improve the Gradle build performance.
 Both clean architecture and modularization help the new team members to understand the flow of code easily. It makes adopting processes smooth and easy.
@@ -80,10 +80,10 @@ class ExampleRepository(
 Also, when it comes to business models, we should separate these models by network and local database cases like the following:
 
 #### Benefits
-- Prevent nullable data
-- Easy mapping
-- Reduce the complexity of annotations.
-- Sometimes, our screens don’t need the full data from network models. In this case, we can provide only needed data to UI.
+• Prevent nullable data
+• Easy mapping
+• Reduce the complexity of annotations.
+• Sometimes, our screens don’t need the full data from network models. In this case, we can   provide only needed data to UI.
 
 ```java
 //Network Business Model
