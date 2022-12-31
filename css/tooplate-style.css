@@ -166,6 +166,10 @@ pre {
   background-color:#eee;
 }
 
+code {
+  color: blue;
+}
+
 /* Customise Block Of Code*/
 code.keyword {
   color: royalblue;
