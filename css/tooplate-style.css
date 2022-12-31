@@ -133,6 +133,16 @@ p {
   padding-bottom: 15px;
 }
 
+/* Block of code style */
+.highlight {
+  color: blue;
+
+}
+
+.nc {
+  color: gold;
+}
+
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
