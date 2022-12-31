@@ -14,7 +14,7 @@ redirect_url: post/2022-12-16-create-gradle-plugins-blog
 
 added_date: 16 Dec 2022
 
-description: A guide to help you how to create gradle plugins
+description: A guide to help you how to create gradle plugins in Android And KMM
 
 author: Mukul Jangir
 ---
