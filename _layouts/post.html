@@ -1,31 +1,12 @@
 <!DOCTYPE html>
 
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ page.title }} - Mukul Jangir</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.0/anchor.min.js"></script>
+  <head> 
+    <title>Hello</title>
   </head>
   <body>
-    <header>
-      <h1><a href="/">Mukul Jangir</a></h1>
-    </header>
-
-    <div class="content post">
-      <h2>{{ page.title }}</h2>
-      <p class="date">{{ page.date | date:"%d %B %Y" }}</p>
-
-      {{ content }}
-
-      <p class="signature">&mdash; Jake Wharton</p>
-    </div>
-    <script>
-      (function () {
-        anchors.options.placement = 'right';
-        anchors.add('.content > h3, .content > h4, .content > h5, .content > h6');
-      })();
-    </script>
+    <p>Paragraph</p>
+    {% post_include _posts/2022-12-30-love-with-io-part-1.md %}
+    <p>Name {{ page.title }}</p>
   </body>
 </html>
