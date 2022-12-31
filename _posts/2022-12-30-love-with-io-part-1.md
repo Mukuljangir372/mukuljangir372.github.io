@@ -7,7 +7,7 @@ tags:
   - Android
   - Kotlin
 
-thumbnail_url: files/thumbnails/dave-hoefler-lsoogGC_5dg-unsplash.jpg
+thumbnail_url: https://mukuljangir372.github.io/files/thumbnails/dave-hoefler-lsoogGC_5dg-unsplash.jpg
 
 redirect_url: post/2022-12-30-love-with-io-part-1
 
