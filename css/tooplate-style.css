@@ -179,26 +179,6 @@ code.keyword {
   color: royalblue;
 }
 
-.highlight {
-  background-color: yellow;
-}
-
-.line-numbers {
-  counter-reset: line;
-}
-
-.line-numbers > code {
-  counter-increment: line;
-}
-
-.line-numbers > code:before {
-  content: counter(line);
-  color: goldenrod;
-  display: inline-block;
-  width: 2em;
-  text-align: right;
-}
-
 .custom-btn {
   background: #eee;
   color: #5b5b5b;
