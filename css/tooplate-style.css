@@ -425,6 +425,7 @@ code.keyword {
 .dark-mode pre {
   padding: 10px;
   background-color:#1f1f1f;
+  color: white;
 }
 .dark-mode .p-top-margin, .dark-mode .p-small  {
   color: #ffffff;
