@@ -1,5 +1,5 @@
 ---
-title: Clean and Scalable Architecture in Android and KMM
+title: [Part-1] Clean and Scalable Architecture in Android and KMM
 layout: post
 
 categories: post
