@@ -8,7 +8,7 @@ tags:
   - Kotlin
   - Clean Architecture
 
-thumbnail_url: https://mukuljangir372.github.io/files/thumbnails/android_clean_arch.png
+thumbnail_url: https://mukuljangir372.github.io/files/thumbnails/clean-arch-two.png
 
 redirect_url: post/2022-08-22-android-clean-architecture-blog-part-2
 
