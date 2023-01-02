@@ -12,7 +12,7 @@ redirect_url: post/2022-01-01-master-kotlin-flows
 
 added_date: 1 Jan 2023
 
-description: A guide to help you to master kotlin flows
+description: A guide to help you to master kotlin flows in android and kotlin.
 
 author: Mukul Jangir
 ---
