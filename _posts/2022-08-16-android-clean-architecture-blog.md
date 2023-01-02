@@ -123,7 +123,106 @@ Sometimes, we need an in-memory cache to preserve the data. Suppose a new requir
 
 You can preserve data while the user is in your app by adding in-memory data caching. Caches are meant to save some information in memory for a specific time — in this case, as long as the user is in the app. Using Mutex from Kotlin Coroutines, we can lock the thread-safe write.
 
+
+```java
+class NewsRepository(
+  private val newsRemoteDataSource: NewsRemoteDataSource
+) {
+    // Mutex to make writes thread-safe.
+    private val latestNewsMutex = Mutex()
+    
+    private var latestNews: List<ArticleHeadline> = emptyList()
+
+    suspend fun getLatestNews(refresh: Boolean = false): List<ArticleHeadline> {
+        if (refresh || latestNews.isEmpty()) {
+            val networkResult = newsRemoteDataSource.fetchLatestNews()
+            // Thread-safe write
+            latestNewsMutex.withLock {
+                this.latestNews = networkResult
+            }
+        }
+
+        return latestNewsMutex.withLock { this.latestNews }
+    }
+}
+```
+
+Suppose the user navigates away from the screen while the network request is in progress, it’ll be canceled, and the result won’t be cached. In this case, you can make an APIs call inside some external coroutine scope.
+
+```java
+class NewsRepository(
+    ...,
+    // Also CoroutineScope(SupervisorJob() + Dispatchers.Default).
+    private val exScope: CoroutineScope
+) { ... }
+```
+
+### Domain Layer
+The domain layer is responsible for encapsulating the complex business logic. It connects UI and Data layer using a reusable usecase or interactor that can easily reuse by multiple data providers like the viewmodel. Usecase is responsible for single data operations like fetching data from users, inserting data into local databases, validating input types, etc.
+
+```java
+class GetNewsUseCase(
+  private val newsRepository: NewsRepository
+  private val defaultDispatcher: CoroutineDispatcher = Dispatchers.Default
+) {
+    suspend operator fun invoke(p: Params): List<ArticleWithAuthor> =
+        withContext(defaultDispatcher) {
+             newsRepository.fetchLatestNews()
+        }
+        
+   data class Params(val isLatest: Boolean) 
+   
+}
+```
+
+You can also use some base interactor or usecase class like the following:
+
+```java
+abstract class Interactor<in P> {
+    operator fun invoke(
+        params: P,
+        timeoutMs: Long = defaultTimeoutMs
+    ): Flow<InvokeStatus> = flow {
+        try {
+            withTimeout(timeoutMs) {
+                emit(InvokeStarted)
+                doWork(params)
+                emit(InvokeSuccess)
+            }
+        } catch (t: TimeoutCancellationException) {
+            emit(InvokeError(t))
+        }
+    }.catch { t -> emit(InvokeError(t)) }
+
+    suspend fun executeSync(params: P) = doWork(params)
+
+    protected abstract suspend fun doWork(params: P)
+
+    companion object {
+        private val defaultTimeoutMs = TimeUnit.MINUTES.toMillis(5)
+    }
+}
+```
+You can use Interactor as a base class, as shown below:
+
+```java
+class ExampleUseCase @Inject constructor(
+    private val repo: ExampleRepo
+    private val dispatchers: AppCoroutineDispatchers
+
+) : Interactor<ExampleUseCase.Params>() {
+    override suspend fun doWork(params: Params) {
+        withContext(dispatchers.io) {
+            repo.fetchSomething()
+        }
+    }
+
+    data class Params(val exampleId: String)
+}
+```
+
 That's it for now. 
+You can read Part-2 from here: [Part-2]()
 
 **Thank you**\
 **Mukul Jangir**
