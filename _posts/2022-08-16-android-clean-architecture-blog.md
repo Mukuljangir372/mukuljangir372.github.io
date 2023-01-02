@@ -221,8 +221,8 @@ class ExampleUseCase @Inject constructor(
 }
 ```
 
-That's it for now. 
-You can read Part-2 from here: [Part-2]()
+That's it for now.\
+You can read Part-2 from here: [Part-2](https://mukuljangir372.github.io/post/2022/08/22/android-clean-architecture-blog-part-2.html)
 
 **Thank you**\
 **Mukul Jangir**
