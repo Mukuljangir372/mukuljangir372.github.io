@@ -14,7 +14,7 @@ redirect_url: post/2023-01-07-multimodule-power-blog
 
 added_date: 7 Jan 2023
 
-description: You'r doing Modularization wrong? Here is the truth of Multi-Module.
+description: Here is the truth of doing Multi-Module In Android.
 
 author: Mukul Jangir
 ---
