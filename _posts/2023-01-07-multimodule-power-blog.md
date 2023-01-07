@@ -30,7 +30,7 @@ In flavored modularization, we define multiple flavors before layers to achieve 
 There are multiple benefits someone can achieve with modularization but truth is these benefits can leave you as well. I will explain you later in this article.
 
 • Scalability\
-• Code Readability
+• Code Readability\
 • Testablity\
 • Code Ownership
 
