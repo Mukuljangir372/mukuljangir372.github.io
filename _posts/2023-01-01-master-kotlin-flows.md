@@ -258,6 +258,89 @@ Merge operator is same as combine operator. It emits item as soon as one of the 
 val mergedflows = merge(flow1, flow2)
 ```
 
+#### FlatMapConcat Operator
+FlatMapConcat combines the emissions of all resulting flows and convert them into a single flow. It wait for the flow to complete before starting a new one.
+
+```kotlin
+//create a flow
+val flow = (0..10).asFlow()
+
+//flatMap
+flow.flatMapConcat { value ->
+   //0,1,2,3,4,5..
+   //convert each value to flow, in each loop, it wait for the flow to complete before staring the new one.
+   value.asFlow() //convert each value to flow
+ }
+.collectLatest {
+  //collect
+}
+```
+
+#### FlatMapMerge Operator
+FlatMapMerge combines the emissions of all resulting flows and convert them into single flow. It merge the all flows and emit them at once.
+
+```kotlin
+//create a flow
+val flow = (0..10).asFlow()
+
+//flatMap
+flow.flatMapMerge { value ->
+   //0,1,2,3,4,5..
+   //convert each value to flow, and wait for all values to finish and merge all the flows and emit them at once.
+   value.asFlow()
+}.collect {
+  //collect
+}
+```
+
+#### FlatMapLatest Operator
+FlatMapLatest combines the emissions of all resuting flows and convert them into single flow. It discord the current flow if latest flow comes in and emit it.
+
+```kotlin
+//create a flow
+val flow = (0..10).asFlow()
+
+//flatMap
+flow.flatMapLatest { value ->
+   //0,1,2,3,4,5..
+   //convert each value to flow, if there is new values emitted, it discord the current flow and try to create a new flow and emit it.
+   value.asFlow()
+}.collect {
+  //collect
+}
+```
+
+#### Transform Operator
+Like map operator, it is used to transform the one data type to another data type by emiting the transformed value.
+
+```kotlin
+//create a flow
+val flow = (0..10).asFlow()
+
+//flatMap
+flow.transform<Int, String>() { value ->
+    emit(value.toString())
+}
+.collect {
+  //collect all strings
+}
+```
+
+#### Drop And Take Operator
+Drop operator used for dropping the first emitted values and take used for taking the first emitted values in kotlin flow.
+
+```kotlin
+//create a flow
+val flow = (0..10).asFlow()
+
+//flatMap
+flow.drop(2) //drop first 2 emitted values 
+.take(3) //take only 3 emitted values
+```
+
+and here you done!\
+Thanks for reading! Don’t forgot to share this and follow me for upcoming awesome articles for you.
+
 **Thank you**\
 **Mukul Jangir**
 
