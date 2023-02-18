@@ -32,7 +32,7 @@ a {
   transition: all 0.4s ease;
 }
 a:hover {
-  color: #ffc200 !important;
+  color: #6495ed !important;
 }
 
 .navbar-brand .uil {
@@ -199,14 +199,14 @@ code.keyword {
   transition: all 0.4s ease;
 }
 .custom-btn:hover {
-  color: #ffc200;
+  color: #6495ed;
 }
 .custom-btn.custom-btn-bg {
   background: #474559;
   color: #ffffff;
 }
 .custom-btn.custom-btn-bg:hover {
-  background: #ffc200;
+  background: #6495ed;
   color: #ffffff !important;
 }
 
@@ -223,7 +223,7 @@ code.keyword {
 }
 
 .animated-item {
-  color: #ffc200;
+  color: #6495ed;
 }
 
 .animated-item {
@@ -321,7 +321,7 @@ code.keyword {
 
 .navbar-light .navbar-nav .nav-link:focus,
 .navbar-light .navbar-nav .nav-link:hover {
-  color: #ffc200;
+  color: #6495ed;
   font-weight: bold;
 }
 .navbar-light .navbar-nav .nav-link:focus span,
@@ -403,7 +403,7 @@ code.keyword {
   color: rgba(255, 255, 255, 0.8);
 }
 .dark-mode .navbar-light .navbar-nav .nav-link:hover {
-  color: #ffc200;
+  color: #6495ed;
 }
 .dark-mode .navbar[class*="headroom--not-top"] {
   background: #0c0c0d;
@@ -521,7 +521,7 @@ code.keyword {
   font-size: inherit;
 }
 .owl-theme .owl-nav [class*=owl-]:hover {
-  color: #ffc200;
+  color: #6495ed;
 }
 .owl-theme .owl-dots .owl-dot {
   outline: none;
@@ -553,10 +553,10 @@ code.keyword {
   height: 48px;
 }
 .contact-form .form-control:hover, .contact-form .form-control:focus {
-  border-color: #ffc200;
+  border-color: #6495ed;
 }
 .contact-form .submit-btn {
-  background: #ffc200;
+  background: #6495ed;
   border-radius: 50px;
   color: #ffffff;
   font-weight: bold;
@@ -585,7 +585,7 @@ code.keyword {
   margin: 5px 0;
 }
 .social-links .uil:hover {
-  color: #ffc200;
+  color: #6495ed;
 }
 
 @media (min-width: 1270px) {
