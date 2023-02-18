@@ -731,6 +731,7 @@ code.keyword {
   width: 100%;
   max-width: 1200px;
   margin-left: 15px;
+  margin-bottom: 80px;
 }
 
 .timeline:before {
