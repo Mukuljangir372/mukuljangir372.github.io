@@ -792,3 +792,19 @@ code.keyword {
 .margin-top-6px {
   margin-top: 6px;
 }
+
+.card-text {
+  font-size: small;
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  background-color: #eee;
+  border-radius: 50px;
+  margin-left: 8px;
+  width: fit-content;
+}
+
+.dark-mode .card-text {
+  background-color: #474559;
+}
