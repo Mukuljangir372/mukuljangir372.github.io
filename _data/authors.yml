@@ -76,10 +76,10 @@ martin:
   cover: False
 manuel:
   username: manuel
-  name: Manuel Vivo
+  name: Mukul Jangir
   location: Murcia, Spain
-  url_full: https://github.com/manuelvicnt/
-  url: github.com/manuelvicnt
+  url_full: https://github.com/mukuljangir372/
+  url: github.com/mukuljangir372
   bio: Android Developer Relations @ Google
   picture: assets/images/manuelvicnt.jpg
   facebook: False
