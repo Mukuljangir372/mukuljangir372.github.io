@@ -1,112 +1,192 @@
 ---
-layout: null
+layout: default
+current: post
+class: post-template
+disqus: false
 ---
 
-<!doctype html>
-<html lang="en">
+<!-- default -->
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+<!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template -->
 
-  <title>Mukul Jangir</title>
-
-  <link rel="stylesheet" href="https://mukuljangir372.github.io/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://mukuljangir372.github.io/css/unicons.css">
-  <link rel="stylesheet" href="https://mukuljangir372.github.io/css/owl.carousel.min.css">
-  <link rel="stylesheet" href="https://mukuljangir372.github.io/css/owl.theme.default.min.css">
-
-  <!-- MAIN STYLE -->
-  <link rel="stylesheet" href="https://mukuljangir372.github.io/css/tooplate-style.css">
-
-
-</head>
-
-<body>
-
-  <!-- MENU -->
-  <nav class="navbar navbar-expand-sm navbar-light">
-    <div class="container">
-      <a class="navbar-brand" href="https://mukuljangir372.github.io/posts.html"><i class='uil uil-arrow-left'></i>
-        Mukul Jangir | Blogs</a>
-
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mx-auto">
-
-        </ul>
-
-        <ul class="navbar-nav ml-lg-auto">
-          <div class="ml-lg-4">
-            <div class="color-mode d-lg-flex justify-content-center align-items-center">
-              <i class="color-mode-icon"></i>
-              Color mode
-            </div>
-          </div>
-        </ul>
-      </div>
+<header class="site-header outer">
+    <div class="inner">
+        {% include site-nav.html %}
     </div>
-  </nav>
+</header>
 
-  <!-- CONTENT -->
-  <section id="content">
-    <div class="container">
-      <div>
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
 
-        <!-- AUTHOR -->
-        <div class="row padding-lr-15" style="padding-top: 25px;">
-          <img src="https://mukuljangir372.github.io/files/author/mukuljangir.jpeg"
-            width="50px" height="50px" style="border-radius: 50px;">
-          <div class="padding-lr-15">
-            <div class="p-small"> {{ page.author }} </div>
-            <div class="p-small"> {{ page.added_date }} </div>
-          </div>
-        </div>
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
 
-        <!-- DIVIDER -->
-        <hr>
+        <article class="post-full {% if page.tags.size > 0 %}{% for tag in page.tags %} tag-{{ tag | slugify: "latin" }}{% endfor %}{% endif %} {{ page.subclass }} {% unless page.cover %}no-image{% endunless %}">
 
-        <!-- TITLE -->
-        <h4 style="padding-top: 0px;"> {{ page.title }} </h4>
+            <header class="post-full-header">
+              <section class="post-full-meta">
+                  <time class="post-full-meta-date" datetime="{{ page.date | date:'%e %B %Y' }}">{{ page.date | date:'%e %B %Y' }}</time>
+              </section>
 
-        <!-- THUMBNAIL -->
-        <img src="{{ page.thumbnail_url }}"
-        width="100%" height="600px" style="border-radius: 10px; margin-top: 20px;">
+              {% if page.tags.size > 0 %}
+                  {% for tag in page.tags %}
+                    <span class="post-card-tags"><a style="color:white;" href='{{ site.baseurl }}tag/{{ tag | downcase | replace: ' ', '-' }}/'>{{ tag | capitalize }}</a></span>
+                  {% endfor %}
+              {% endif %}
+                <h1 class="post-full-title">{{ page.title }}</h1>
+            </header>
 
-        <!-- ARTICLE CONTENT -->
-        <article style="padding-top: 50px;">
-          {{ content }}
+            {% if page.cover %}
+            <figure class="post-full-image" style="background-image: url({{ site.baseurl }}{{ page.cover }})">
+            </figure>
+            {% endif %}
+
+            <section class="post-full-content">
+                <div class="kg-card-markdown">
+                    {{ content }}
+                </div>
+            </section>
+
+            <!-- Email subscribe form at the bottom of the page -->
+            {% if site.subscribers %}
+                <section class="subscribe-form">
+                    <h3 class="subscribe-form-title">Subscribe to {{ site.title }}</h3>
+                    <p>Get the latest posts delivered right to your inbox</p>
+                    {% include subscribe-form.html placeholder="youremail@example.com" %}
+                </section>
+            {% endif %}
+
+            <footer class="post-full-footer">
+                <!-- Everything inside the #author tags pulls data from the author -->
+                <!-- #author-->
+                {% for author in site.data.authors %}
+                    {% if author[1].username == page.author %}
+                        <section class="author-card">
+                            {% if author[1].picture %}
+                                <img class="author-profile-image" src="{{ site.baseurl }}{{ author[1].picture }}" alt="{{ page.author }}" />
+                            {% endif %}
+                            <section class="author-card-content">
+                                <h4 class="author-card-name"><a href="{{ site.baseurl }}author/{{ page.author }}">{{ author[1].name }}</a></h4>
+                                {% if author[1].bio %}
+                                    <p>{{ author[1].bio }}</p>
+                                {% else %}
+                                    <p>Read <a href="{{ site.baseurl }}author/{{ page.author }}">more posts</a> by this author.</p>
+                                {% endif %}
+                            </section>
+                        </section>
+                        <div class="post-full-footer-right">
+                            <a class="author-card-button" href="{{ site.baseurl }}author/{{ page.author }}">Read More</a>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+                <!-- /author  -->
+            </footer>
+
+            <!-- If you use Disqus comments, just uncomment this block.
+            The only thing you need to change is "test-apkdzgmqhj" - which
+            should be replaced with your own Disqus site-id. -->
+            {% if site.disqus or page.disqus %}
+                <section class="post-full-comments">
+                    <div id="disqus_thread"></div>
+                    <script>
+                        var disqus_config = function () {
+                            this.page.url = '{{ site.url }}{{ page.url }}';
+                            this.page.identifier = '{{ page.id }}';
+                            this.page.title = '{{ page.title }}';
+                        };
+                        (function() {
+                            var d = document, s = d.createElement('script');
+                            s.src = 'https://{{ site.disqus_shortname }}.disqus.com/embed.js';
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+                </section>
+            {% endif %}
+
         </article>
 
-      </div>
     </div>
-  </section>
+</main>
 
-  <!-- FOOTER -->
-  <footer class="footer py-5">
-    <div class="container">
-      <div class="row">
+<!-- Links to Previous/Next posts -->
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+            {% if page.tags.size > 0 %}
+                {% assign primary = page.tags | first %}
+                {% assign related_posts = 0 %}
+                {% for post in site.posts %}
+                  {% if post.tags.size > 0 %}
+                      {% if post.tags contains primary %}
+                        {% assign related_posts = related_posts | plus: 1 %}
+                      {% endif %}
+                  {% endif %}
+                {% endfor %}
+                {% if related_posts > 1 %}
+                    <article class="read-next-card"
+                        {% if site.cover %}
+                            style="background-image: url({{ site.baseurl }}{{ site.cover }})"
+                        {% else %}
+                            {% if page.cover %}
+                                style="background-image: url(url({{ site.baseurl }}{{ page.cover }})"{% endif %}
+                        {% endif %}
+                    >
+                        <header class="read-next-card-header">
+                            <small class="read-next-card-header-sitetitle">&mdash; {{ site.title }} &mdash;</small>
+                            {% if primary %}
+                                <h3 class="read-next-card-header-title"><a href="{{ site.baseurl }}tag/{{ primary | slugify: "latin" }}/">{{ primary | capitalize }}</a></h3>
+                            {% endif %}
+                        </header>
+                        <div class="read-next-divider">{% include infinity.html %}</div>
+                        <div class="read-next-card-content">
+                            <ul>
+                                {% assign count = 0 %}
+                                {% for post in site.posts %}
+                                  {% if post.tags contains primary %}
+                                    {% if post.title != page.title %}
+                                        {% assign count = count | plus: 1 %}
+                                        {% if count <= 3 %}
+                                            <li><a href="{{ site.baseurl }}{{ post.url | remove_first: '/' }}">{{ post.title }}</a></li>
+                                        {% endif %}
+                                    {% endif %}
+                                  {% endif %}
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <footer class="read-next-card-footer">
+                            <a href="{{ site.baseurl }}tag/{{ primary | slugify: "latin" }}/">
+                                {% if related_posts > 1 %}
+                                    See all {{ related_posts | minus: 1 }} posts  →
+                                {% elsif related_posts == 1 %}
+                                    {{ related_posts }} post  →
+                                {% else %}
+                                    No posts.
+                                {% endif %}
+                            </a>
+                        </footer>
+                    </article>
+                {% endif %}
+            {% endif %}
 
-        <div class="col-lg-12 col-12">
-          <p class="copyright-text text-center">Copyright &copy; 2023 Mukul Jangir . All rights reserved</p>
-          <p class="copyright-text text-center">Designed by <a rel="" href="https://mukuljangir372.github.io">Mukul
-              Jangir</a></p>
+            <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            {% if page.next %}
+                {% include post-card-next.html %}
+            {% endif %}
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            {% if page.previous %}
+                {% include post-card-previous.html %}
+            {% endif %}
+
         </div>
-
-      </div>
     </div>
-  </footer>
+</aside>
 
-  <script src="https://mukuljangir372.github.io/js/jquery-3.3.1.min.js"></script>
-  <script src="https://mukuljangir372.github.io/js/popper.min.js"></script>
-  <script src="https://mukuljangir372.github.io/js/bootstrap.min.js"></script>
-  <script src="https://mukuljangir372.github.io/js/Headroom.js"></script>
-  <script src="https://mukuljangir372.github.io/js/jQuery.headroom.js"></script>
-  <script src="https://mukuljangir372.github.io/js/owl.carousel.min.js"></script>
-  <script src="https://mukuljangir372.github.io/js/smoothscroll.js"></script>
-  <script src="https://mukuljangir372.github.io/js/custom.js"></script>
+<!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
+{% include floating-header.html %}
 
-</body>
+<!-- /post -->
 
-</html>
+<!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs -->
