@@ -7,26 +7,26 @@ words_per_minute: 200
 
 # edit baseurl to simply '/' if using as your personal page (instead of a project page)
 baseurl: https://mukuljangir372.github.io/
-url: https://mukuljangir372.github.io
+url: https://mukuljangir372.github.io/
 
 # Website info
-title: Manuel Vivo .dev
+title: Mukul Jangir .dev
 description: A place where you can learn about Android development
 cover: assets/images/blog-cover.jpg
 #logo: assets/images/blog-icon.png
 #logo_dark: assets/images/favicon.png
 favicon: assets/images/favicon.png
-production_url: https://manuelvivo.dev/
-source_url: https://github.com/manuelvicnt/manuelvicnt.github.io
-CNAME: manuelvivo.dev #add cname for website to be created
+production_url: https://mukuljangir372.github.io/
+source_url: https://github.com/mukuljangir372/mukuljangir372.github.io
+CNAME: mukuljangir372.github.io #add cname for website to be created
 
 # Social info
 navigation: True # show the navbar links
-twitter: manuelvicnt
+twitter: mukuljangir372
 
 # Disqus
 disqus: True
-disqus_shortname: manuelvivo
+disqus_shortname: mukuljangir
 
 # Google Analytics
 google_analytics: G-8WG7TD0NF4 # replace with your GA tracking identifier
@@ -66,13 +66,13 @@ feed:
 # or "master" otherwise
 safe: False
 lsi: False
-username: manuelvicnt
-repo: manuelvicnt
+username: mukuljangir
+repo: manuelmukuljangirvicnt
 branch: master
-relative_source: ../manuelvivo.dev/
+relative_source: ../mukuljangir372.github.io/
 destination: _site
-production_url:  https://manuelvivo.dev/
-source_url:  https://github.com/manuelvicnt/manuelvicnt.github.io
+production_url:  https://mukuljangir372.github.io/
+source_url:  https://github.com/mukuljangir372/mukuljangir372.github.io
 
 exclude:
   - assets/css
