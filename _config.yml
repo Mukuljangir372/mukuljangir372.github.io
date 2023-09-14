@@ -1,94 +1,17 @@
-# Jekyll configuration
-markdown: kramdown
-highlighter: rouge
-paginate: 100 # it will paginate after this number
-language: 'en-us'
-words_per_minute: 200
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-redirect-from
+# mimic GitHub Pages with --safe
+whitelist:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
 
-# edit baseurl to simply '/' if using as your personal page (instead of a project page)
-baseurl: https://mukuljangir372.github.io/
-url: https://mukuljangir372.github.io/
-
-# Website info
-title: Mukul Jangir .dev
-description: A place where you can learn about Android development
-cover: assets/images/blog-cover.jpg
-#logo: assets/images/blog-icon.png
-#logo_dark: assets/images/favicon.png
-favicon: assets/images/favicon.png
-production_url: https://mukuljangir372.github.io/
-source_url: https://github.com/mukuljangir372/mukuljangir372.github.io
-CNAME: mukuljangir372.github.io #add cname for website to be created
-
-# Social info
-navigation: True # show the navbar links
-twitter: mukuljangir372
-
-# Disqus
-disqus: True
-disqus_shortname: mukuljangir
-
-# Google Analytics
-google_analytics: G-8WG7TD0NF4 # replace with your GA tracking identifier
-
-# Permalinks
-permalink: /:title
-# permalink: /author/:author
-# permalink: /tag/:tag
-
-# Authors' info in `_data/authors.yml`
-# Tags' info in `_data/tags_info.yml`
-
-# gems and other configs
-plugins_dir: [_plugins]
-plugins: [jekyll-paginate, jekyll-feed, jekyll-seo-tag, jekyll-sitemap]
-
-feed:
-  path: feed.xml
-
-# Additional settings available on the front-matter
-# Site logo in the index.html (as in demo.ghost.io)
-# Author's page cover in _layouts/author.html
-# The same for page.html and tag.html layouts
-# Post's page cover as a per-post basis _posts/...
-# Disqus comments as a per-post basis
-# ...
-
-# Settings for building master branch with travis-ci
-# with jekyll-travis
-
-# Settings for deploy rake task
-# Username and repo of Github repo, e.g.
-# https://github.com/USERNAME/REPO.git
-# username defaults to ENV['GIT_NAME'] used by Travis
-# repo defaults to USERNAME.github.io
-# Branch defaults to "source" for USERNAME.github.io
-# or "master" otherwise
-safe: False
-lsi: False
-username: mukuljangir
-repo: manuelmukuljangirvicnt
-branch: master
-relative_source: ../mukuljangir372.github.io/
-destination: _site
-production_url:  https://mukuljangir372.github.io/
-source_url:  https://github.com/mukuljangir372/mukuljangir372.github.io
-
-exclude:
-  - assets/css
-  - node_modules
-  - vendor
-  - .travis.yml
-  - Gemfile
-  - Gemfile.lock
-  - GHOST.txt
-  - gulpfile.js
-  - LICENSE
-  - package.json
-  - package-lock.json
-  - Rakefile
-  - README.md
-  - script.py
-  - changelog.md
-  - "*.Rmd"
-  - .git*
+include:
+- toolbar.html

@@ -1,39 +1,349 @@
----
-layout: default
-current: home
-class: 'home-template'
-navigation: True
----
+<!doctype html>
+<html lang="en">
 
-<!-- < default -->
-<!-- The tag above means: insert everything in this file
-into the {body} of the default.hbs template -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-<!-- The big featured header, it uses blog cover image as a BG if available -->
-<header class="site-header outer {% if page.cover or site.cover %}" style="background-image:  url({{ site.baseurl }}{% if page.cover %}{{ page.cover }}{% elsif site.cover %}{{ site.cover }}{% endif %}) {% else %}no-cover{% endif %}">
-    <div class="inner">
-        <div class="site-header-content">
-            <h1 class="site-title">
-                {% if site.logo %}
-                    <img class="site-logo" src="{{ site.baseurl }}{{ site.logo }}" alt="{{ site.title }}"/>
-                {% else %}
-                    {{ site.title }}
-                {% endif %}
+  <title>Mukul Jangir</title>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/unicons.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+  <!-- MAIN STYLE -->
+  <link rel="stylesheet" href="css/tooplate-style.css">
+
+
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+  <!-- MENU -->
+  <nav class="navbar navbar-expand-sm navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><i class='uil uil-ninja'></i> Mukul Jangir</a>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+
+        </ul>
+
+        <ul class="navbar-nav ml-lg-auto">
+          <div class="ml-lg-4">
+            <div class="color-mode d-lg-flex justify-content-center align-items-center">
+              <i class="color-mode-icon"></i>
+              Color mode
+            </div>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+
+
+
+  <!-- ABOUT -->
+  <section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center">
+          <div class="about-text">
+
+            <h1 class="animated animated-text">
+              <span class="mr-2">Hey, I'm</span>
+              <div class="animated-info">
+                <span class="animated-item">Mukul Jangir</span>
+                <span class="animated-item">Mukul Jangir</span>
+              </div>
             </h1>
-            <h2 class="site-description">{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}</h2>
+
+            <div class="p-top-margin">
+              Hi, I'm Mukul Jangir, an software engineer android having experience in building kotlin and java android
+              applications.
+              I've been worked on over 25+ android apps, 10+ libraries and contributed to multiple opensource projects.
+              I've successfully built many apps with latest tech stack and published on playstore.
+              I love to contribute to opensource and working on android and kotlin libraries.
+            </div>
+
+            <div class="custom-btn-group mt-4">
+              <a href="https://github.com/Mukuljangir372" class="btn mr-lg-2 text-primary"><i class='uil uil-ninja'></i>
+                Github | Open Source</a>
+              <a href="https://play.google.com/store/apps/developer?id=Mukul+Jangir" class="btn mr-lg-2 text-primary"><i
+                  class='uil uil-play'></i>Apps On Playstore</a>
+              <a href="https://www.linkedin.com/in/mukuljangir372" class="btn mr-lg-2 text-primary"><i
+                  class='uil uil-file-alt'></i>Connect on Linkedin</a>
+            </div>
+
+            <div class="custom-btn-group mt-4">
+              <a href="posts.html" class="btn custom-btn custom-btn-bg custom-btn-link"> Read Blogs</a>
+
+              <a href="https://drive.google.com/file/d/1PN3CG3tAQrsGkfB_zJ3OVCNmFI3tQhh7/view?usp=sharing"
+                class="btn mx-lg-2 custom-btn"><i class='uil uil-file-alt'></i> Download Resume</a>
+
+              <a href="mailto:mukul.jangir372@gmail.com" class="btn mx-lg-2 custom-btn"><i
+                  class='uil uil-fast-mail'></i> Contact me</a>
+            </div>
+
+          </div>
         </div>
-        {% include site-nav.html %}
+
+
+
+      </div>
     </div>
-</header>
+  </section>
 
-<!-- The main content area -->
-<main id="site-main" class="site-main outer" role="main">
-    <div class="inner">
 
-        <div class="post-feed">
-            <!-- The tag below includes the markup for each post - partials/post-card.hbs -->
-            {%  include post-card.html %}
+
+
+
+
+
+
+
+  <!-- EXPERIENCE SECTION -->
+  <section class="justify-content-center align-items-center">
+
+    <div class="container">
+      <h3 class="section-title">Professional Experience</h3>
+
+      <div class="timeline">
+        <!-- START OF TIMELINE -->
+
+
+
+
+        <!-- SCOGO NETWORKS -->
+        <div class="timeline-item">
+          <div class="timeline-icon"></div>
+          <div class="timeline-content">
+            <h4>Android Developer</h4>
+            <p>Scogo Networks | Mumbai (Sep 2021 - Present)</p>
+
+            <div style="display: flex; flex-direction: column;" class="margin-top-6px">
+              <p>
+              <p>• Built Live-Location tracking system using Location and Google Geo APIs.</p>
+              <p>• Built and Deployed Realtime-Chat using Websocket and Firebase Messaging.</p>
+              <p>• Integrated complex Dynamic-Ticket-Execution flow for field engineers.</p>
+              <p>• Built In-App-Wallet for making ticket payments and transactions.</p>
+              <p>• Built Media-Picker library based on Camera-X and Jetpack-compose.</p>
+              <p>• Closely worked on performance tuning of app Ticket-System.</p>
+              <p>• Handled responsibility of deploying new app-updates to playstore.</p>
+              <p>• Managed responsibility ofreleasing new updates of Media library on jitpack.</p>
+              </p>
+            </div>
+
+          </div>
         </div>
 
+
+
+
+        <!-- END OF TIMELINE -->
+      </div>
     </div>
-</main>
+  </section>
+
+
+
+
+
+
+
+
+  <!-- WORK SECTION -->
+  <section class="justify-content-center align-items-center">
+
+    <div class="container">
+      <h3 class="section-title">Work</h3>
+
+      <div class="timeline">
+        <!-- START OF TIMELINE -->
+
+
+        <!-- APPS ON PLAYSTORE -->
+        <div class="timeline-item">
+          <div class="timeline-icon"></div>
+          <div class="timeline-content">
+            <h4>Apps</h4>
+            <p>Published apps on playstore.</p>
+
+            <div style="display: flex; flex-direction: column;" class="margin-top-6px">
+              <p>
+                <a href="https://play.google.com/store/apps/details?id=com.mu.jan.spendtrack" class="text-primary"><i
+                    class='uil uil-play'></i>SpendTrack: Track your Expenses & Bills </a>
+                <a class="card-text">Android</a>
+                <a class="card-text">Kotlin</a>
+              </p>
+              <p>
+                <a href="https://play.google.com/store/apps/details?id=com.mu.jan.snoofy_freemusicandvideos"
+                  class="text-primary"><i class='uil uil-play'></i>Snoofy: Listen Music & Videos </a>
+                <a class="card-text">Android</a>
+                <a class="card-text">Kotlin</a>
+              </p>
+              <p>
+                <a href="https://play.google.com/store/apps/details?id=com.mu.jan.xnody.application"
+                  class="text-primary"><i class='uil uil-play'></i>X Nody Notes: Notebook, ToDo and Reminders </a>
+                <a class="card-text">Android</a>
+                <a class="card-text">Java</a>
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+
+
+
+
+
+
+        <!-- Open Source -->
+        <div class="timeline-item">
+          <div class="timeline-icon"></div>
+          <div class="timeline-content">
+            <h4>Open Source</h4>
+            <p>Contributed to multiple opensource projects.</p>
+
+            <div style="display: flex; flex-direction: column;" class="margin-top-6px">
+              <p>
+                <a href="https://github.com/Mukuljangir372/Primer-Android" class="text-primary"><i
+                    class='uil uil-ninja'></i>Primer: Private And Secure Chat</a>
+                    <a class="card-text">Android</a>
+                <a class="card-text">Kotlin</a>
+              </p>
+              <p>
+                <a href="https://github.com/Mukuljangir372/fastmapper" class="text-primary"><i
+                    class='uil uil-ninja'></i>FastMapper: Kotlin Object Mapping Library</a>
+                <a class="card-text">Kotlin</a>
+              </p>
+              <p>
+                <a href="https://github.com/Mukuljangir372/Reactive-Store" class="text-primary"><i
+                    class='uil uil-ninja'></i>Reactive-Store: State Android Kotlin Library</a>
+                    <a class="card-text">Android</a>
+                <a class="card-text">Kotlin</a>
+              </p>
+              <p>
+                <a href="https://github.com/Mukuljangir372/ok-redirect-android" class="text-primary"><i
+                    class='uil uil-ninja'></i>Ok-Redirect: Android Kotlin Library</a>
+                    <a class="card-text">Android</a>
+                <a class="card-text">Kotlin</a>
+              </p>
+              <p>
+                <a href="https://github.com/Mukuljangir372/NFT-App" class="text-primary"><i
+                    class='uil uil-ninja'></i>NFT: Blockchain & Tokens</a>
+                    <a class="card-text">Android</a>
+                <a class="card-text">Kotlin</a>
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+
+
+
+
+        <!-- Articles -->
+        <div class="timeline-item">
+          <div class="timeline-icon"></div>
+          <div class="timeline-content">
+            <h4>Articles | Blogs</h4>
+            <p>Written multiple articles on latest tech stack.</p>
+
+            <div style="display: flex; flex-direction: column;" class="margin-top-6px">
+              <p>
+                <a href="https://mukuljangir372.github.io/post/2023/02/18/mvvm-blog.html" class="text-primary"><i
+                    class='uil uil-book'></i>Mvvm Architecture In Android</a>
+              </p>
+              <p>
+                <a href="https://mukuljangir372.github.io/post/2023/01/26/how-to-cache-blog.html"
+                  class="text-primary"><i class='uil uil-book'></i>How to Cache in Android?</a>
+              </p>
+              <p>
+                <a href="https://mukuljangir372.github.io/post/2023/01/07/multimodule-power-blog.html"
+                  class="text-primary"><i class='uil uil-book'></i>Top Level Flavored Multi-Module Architecture</a>
+              </p>
+              <p>
+                <a href="https://mukuljangir372.github.io/post/2023/01/01/master-kotlin-flows.html"
+                  class="text-primary"><i class='uil uil-book'></i>Master Kotlin Flows With Operators</a>
+              </p>
+              <p>
+                <a href="https://mukuljangir372.github.io/post/2022/12/16/create-gradle-plugins-blog.html"
+                  class="text-primary"><i class='uil uil-book'></i>Create Gradle Plugins In Android & KMM</a>
+              </p>
+              <p>
+                <a href="https://mukuljangir372.github.io/post/2022/08/22/android-clean-architecture-blog-part-2.html"
+                  class="text-primary"><i class='uil uil-book'></i>Part-2 Clean and Scalable Architecture in Android and
+                  KMM</a>
+              </p>
+              <p>
+                <a href="https://mukuljangir372.github.io/post/2022/08/16/android-clean-architecture-blog.html"
+                  class="text-primary"><i class='uil uil-book'></i>Part-1 Clean and Scalable Architecture in Android and
+                  KMM</a>
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+
+
+
+
+        <!--END OF TIMELINE-->
+      </div>
+
+
+
+    </div>
+  </section>
+
+
+
+
+
+  <!-- FOOTER -->
+  <footer class="footer py-5">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-12 col-12">
+          <p class="copyright-text text-center">Copyright &copy; 2023 Mukul Jangir . All rights reserved</p>
+          <p class="copyright-text text-center">Designed by <a rel="" href="https://mukuljangir372.github.io">Mukul
+              Jangir</a></p>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/Headroom.js"></script>
+  <script src="js/jQuery.headroom.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/smoothscroll.js"></script>
+  <script src="js/custom.js"></script>
+
+</body>
+
+</html>
